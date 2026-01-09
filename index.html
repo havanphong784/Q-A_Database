@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +27,7 @@
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg-color);
-            background-image: 
+            background-image:
                 radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
             color: var(--text-primary);
@@ -87,11 +88,12 @@
             font-weight: 600;
             margin-bottom: 15px;
             color: var(--accent);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 10px;
             position: sticky;
             top: 0;
-            background: inherit; /* Keeps header visible on scroll if setup right, or just nice text */
+            background: inherit;
+            /* Keeps header visible on scroll if setup right, or just nice text */
         }
 
         /* Category Panel */
@@ -112,7 +114,7 @@
         }
 
         .cate-item:hover {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             color: var(--text-primary);
         }
 
@@ -121,10 +123,10 @@
             color: var(--accent);
             border: 1px solid rgba(56, 189, 248, 0.3);
         }
-        
+
         .cate-count {
             font-size: 0.75rem;
-            background: rgba(0,0,0,0.3);
+            background: rgba(0, 0, 0, 0.3);
             padding: 2px 8px;
             border-radius: 10px;
             float: right;
@@ -217,10 +219,18 @@
             flex-direction: column;
             margin-bottom: 12px;
             padding-bottom: 12px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .vocab-en { font-weight: 600; color: var(--accent); }
-        .vocab-vn { color: var(--text-secondary); font-size: 0.9rem; }
+
+        .vocab-en {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .vocab-vn {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
 
         /* Controls */
         .controls {
@@ -244,10 +254,24 @@
             gap: 8px;
         }
 
-        .btn-primary { background: var(--accent); color: #0f172a; }
-        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
-        .btn-secondary { background: var(--btn-bg); color: var(--text-primary); }
-        .btn-secondary:hover { background: var(--btn-hover); }
+        .btn-primary {
+            background: var(--accent);
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--btn-bg);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--btn-hover);
+        }
 
         .shortcuts-hint {
             text-align: center;
@@ -276,16 +300,17 @@
             background: var(--card-bg);
             padding: 10px;
             border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             display: flex;
             gap: 10px;
             align-items: center;
             z-index: 50;
         }
+
         .jump-input {
-            background: rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             padding: 5px 10px;
             border-radius: 5px;
@@ -299,6 +324,7 @@
                 grid-template-columns: 220px 1fr 280px;
                 gap: 20px;
             }
+
             .card {
                 padding: 32px;
             }
@@ -309,55 +335,68 @@
                 grid-template-columns: 200px 1fr;
                 gap: 16px;
             }
+
             .right-panel {
                 display: none;
             }
+
             .card {
                 padding: 28px;
                 min-height: 250px;
             }
+
             .question-text {
                 font-size: 1.3rem;
             }
         }
-        
+
         @media (max-width: 768px) {
             header {
                 margin: 1rem 0;
             }
+
             h1 {
                 font-size: 1.8rem;
             }
+
             .app-container {
                 grid-template-columns: 1fr;
                 padding: 10px;
                 gap: 15px;
             }
+
             .panel {
                 max-height: 250px;
             }
+
             .quiz-section {
                 order: 1;
             }
+
             .categories-panel {
                 order: 2;
             }
+
             .card {
                 padding: 24px;
                 min-height: 200px;
                 border-radius: 16px;
             }
+
             .question-text {
                 font-size: 1.15rem;
                 line-height: 1.5;
             }
+
             .answer-text {
                 font-size: 1.1rem;
             }
+
             .controls {
                 flex-wrap: wrap;
                 gap: 10px;
             }
+
             button {
                 padding: 10px 16px;
                 font-size: 0.9rem;
@@ -365,9 +404,11 @@
                 justify-content: center;
                 min-width: 100px;
             }
+
             .shortcuts-hint {
                 display: none;
             }
+
             .jump-to {
                 bottom: 10px;
                 right: 10px;
@@ -379,46 +420,57 @@
             h1 {
                 font-size: 1.5rem;
             }
+
             .subtitle {
                 font-size: 0.85rem;
             }
+
             .app-container {
                 padding: 8px;
                 gap: 12px;
             }
+
             .panel {
                 padding: 16px;
                 border-radius: 14px;
                 max-height: 200px;
             }
+
             .panel-title {
                 font-size: 1rem;
                 margin-bottom: 10px;
                 padding-bottom: 8px;
             }
+
             .cate-item {
                 padding: 10px;
                 font-size: 0.9rem;
             }
+
             .card {
                 padding: 20px;
                 min-height: 180px;
                 border-radius: 14px;
             }
+
             .question-meta {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 8px;
             }
+
             .question-text {
                 font-size: 1.05rem;
             }
+
             .answer-text {
                 font-size: 1rem;
             }
+
             .controls {
                 margin-top: 1rem;
             }
+
             button {
                 padding: 10px 12px;
                 font-size: 0.85rem;
@@ -426,12 +478,47 @@
         }
     </style>
 </head>
+
 <body>
     <div class="progress-bar" id="progressBar"></div>
+
+    <style>
+        .nav-tabs {
+            display: flex;
+            gap: 12px;
+            margin-top: 1rem;
+            justify-content: center;
+        }
+
+        .nav-tab {
+            padding: 10px 24px;
+            border-radius: 30px;
+            background: var(--btn-bg);
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .nav-tab:hover {
+            background: var(--btn-hover);
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background: var(--accent);
+            color: #0f172a;
+        }
+    </style>
 
     <header>
         <h1>CSDL Mastery</h1>
         <div class="subtitle">Ôn tập trắc nghiệm & Kiến thức cơ sở dữ liệu</div>
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-tab active">📚 Q&A Review</a>
+            <a href="mcq.html" class="nav-tab">✏️ Trắc Nghiệm</a>
+        </div>
     </header>
 
     <div class="app-container">
@@ -448,11 +535,12 @@
             <main class="card">
                 <div class="question-meta">
                     <span class="question-cat-label" id="qCategory">General</span>
-                    <span class="question-number">Question <span id="qIndex">1</span> / <span id="qTotal">--</span></span>
+                    <span class="question-number">Question <span id="qIndex">1</span> / <span
+                            id="qTotal">--</span></span>
                 </div>
-                
+
                 <div class="question-text" id="questionText">Loading...</div>
-                
+
                 <div class="answer-container" id="answerContainer">
                     <div class="answer-label">Đáp án:</div>
                     <div class="answer-text" id="answerText">...</div>
@@ -521,7 +609,7 @@
             });
 
             const categories = Object.keys(counts);
-            
+
             // "All" item
             let html = `<li class="cate-item active" onclick="filterCategory('All')" id="cat-All">
                 All Questions <span class="cate-count">${allQuestions.length}</span>
@@ -538,12 +626,12 @@
 
         function filterCategory(cat) {
             activeCategory = cat;
-            
+
             // Update UI
             document.querySelectorAll('.cate-item').forEach(el => el.classList.remove('active'));
             const activeId = cat === 'All' ? 'cat-All' : `cat-${escapeHtmlId(cat)}`;
             const activeEl = document.getElementById(activeId);
-            if(activeEl) activeEl.classList.add('active');
+            if (activeEl) activeEl.classList.add('active');
 
             // Filter Data
             if (cat === 'All') {
@@ -560,29 +648,29 @@
         function escapeHtmlId(str) {
             return str.replace(/[^a-zA-Z0-9-_]/g, '_');
         }
-        
+
         function escapeHtml(text) {
-             const map = {
+            const map = {
                 '&': '&amp;',
                 '<': '&lt;',
                 '>': '&gt;',
                 '"': '&quot;',
                 "'": '&#039;'
             };
-            return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+            return text.replace(/[&<>"']/g, function (m) { return map[m]; });
         }
 
         // --- Quiz Logic ---
         function loadQuestion(index) {
             if (filteredQuestions.length === 0) {
-                 elQuestionText.textContent = "No questions in this category.";
-                 elQTotal.textContent = "0";
-                 return;
+                elQuestionText.textContent = "No questions in this category.";
+                elQTotal.textContent = "0";
+                return;
             }
 
             if (index < 0) index = 0;
             if (index >= filteredQuestions.length) index = filteredQuestions.length - 1;
-            
+
             currentQIndex = index;
             const data = filteredQuestions[currentQIndex];
 
@@ -592,14 +680,14 @@
             elQCategory.textContent = data.category || "General";
             elQuestionText.textContent = data.question;
             elAnswerText.textContent = data.answer;
-            
+
             resetAnswer();
             updateProgress();
-            
+
             // Update Jump Input (Real ID vs Index? Let's use Index for navigation)
             elJumpInput.value = currentQIndex + 1;
             elJumpInput.max = filteredQuestions.length;
-            
+
             updateVocabPanel(data.question + " " + data.answer);
         }
 
@@ -650,30 +738,30 @@
         function updateVocabPanel(text) {
             elVocabList.innerHTML = "";
             const textLower = text.toLowerCase();
-            
+
             const matches = vocabData.filter(v => {
                 const termLower = v.en.toLowerCase();
-                 // Flexible matching
+                // Flexible matching
                 if (termLower.length < 4) {
-                     const regex = new RegExp(`\\b${escapeRegExp(termLower)}\\b`, 'i');
-                     return regex.test(textLower);
+                    const regex = new RegExp(`\\b${escapeRegExp(termLower)}\\b`, 'i');
+                    return regex.test(textLower);
                 } else {
                     return textLower.includes(termLower);
                 }
             });
 
             if (matches.length === 0) {
-                 const li = document.createElement('li');
-                 li.textContent = "Không tìm thấy từ vựng nổi bật.";
-                 li.className = "vocab-vn";
-                 elVocabList.appendChild(li);
-                 return;
+                const li = document.createElement('li');
+                li.textContent = "Không tìm thấy từ vựng nổi bật.";
+                li.className = "vocab-vn";
+                elVocabList.appendChild(li);
+                return;
             }
 
             matches.sort((a, b) => b.en.length - a.en.length);
-            
+
             // Deduplicate if needed? Usually vocabData is unique keys.
-            
+
             matches.forEach(item => {
                 const li = document.createElement('li');
                 li.className = "vocab-item";
@@ -691,7 +779,7 @@
             if (e.key === 'ArrowRight') nextQuestion();
             if (e.key === 'ArrowLeft') prevQuestion();
             if (e.key === ' ' || e.key === 'Enter') {
-                e.preventDefault(); 
+                e.preventDefault();
                 toggleAnswer();
             }
         });
@@ -699,4 +787,5 @@
         init();
     </script>
 </body>
+
 </html>
