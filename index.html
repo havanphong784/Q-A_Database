@@ -24,6 +24,31 @@
             --active-item: rgba(56, 189, 248, 0.2);
         }
 
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(56, 189, 248, 0.3);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(56, 189, 248, 0.5);
+        }
+
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(56, 189, 248, 0.3) rgba(255, 255, 255, 0.05);
+        }
+
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg-color);
