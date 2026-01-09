@@ -1,0 +1,1028 @@
+# CSDL ANSWERS
+
+# SQL Quiz - Questions and Answers
+
+## Questions and Answers
+
+- Q1: What is a correlated subquery?
+    
+    **Answer: B) Subquery that depends on outer query values**
+    
+- Q2: What does the HAVING clause do in SQL?
+    
+    **Answer: B) Filters groups after aggregation**
+    
+- Q3: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You need to retrieve the FirstName and LastName of employees who earn a Salary between $50,000 and $70,000 (inclusive).
+    
+    **Answer: B) SELECT FirstName, LastName FROM Employees WHERE Salary BETWEEN 50000 AND 70000;**
+    
+- Q4: Which operator restricts output based on conditions in SQL?
+    
+    **Answer: A) WHERE**
+    
+- Q5: What does GROUP BY allow in SQL?
+    
+    **Answer: A) Aggregation of data**
+    
+- Q6: Which operator is used to search for a specified pattern in SQL?
+    
+    **Answer: A) LIKE**
+    
+- Q7: Which join returns rows with NULL for unmatched columns?
+    
+    **Answer: C) Outer Join**
+    
+- Q8: In a LEFT JOIN, which table's rows are fully returned?
+    
+    **Answer: A) Left table**
+    
+- Q9: What does the FULL JOIN do in SQL?
+    
+    **Answer: B) Combines unmatched rows and matches**
+    
+- Q10: What is a subquery in SQL?
+    
+    **Answer: A) A query inside another query**
+    
+- Q11: What does the RIGHT JOIN return?
+    
+    **Answer: A) All rows from the right table and matching rows from the left**
+    
+- Q12: What does the LEFT JOIN return when there's no match?
+    
+    **Answer: A) NULL values for columns of the right table**
+    
+- Q13: Which type of join returns records that have matching values in both tables?
+    
+    **Answer: A) Inner Join**
+    
+- Q14: What type of table exists only in memory and not in the database?
+    
+    **Answer: A) Virtual table**
+    
+- Q15: In SQL, which keyword checks for values within a list?
+    
+    **Answer: C) IN**
+    
+- Q16: The ORDER BY clause must always be placed where in a SQL statement?
+    
+    **Answer: D) Last**
+    
+- Q17: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You want to retrieve the FirstName and LastName of employees who are either in DepartmentID 2 or DepartmentID 4.
+    
+    **Answer: B) SELECT FirstName, LastName FROM Employees WHERE DepartmentID IN (2, 4);**
+    
+- Q18: What does the keyword IS NULL check for?
+    
+    **Answer: B) Columns with no value**
+    
+- Q19: How is DESC used in SQL?
+    
+    **Answer: A) To sort in descending order**
+    
+- Q20: What does an alias do in SQL?
+    
+    **Answer: B) Renames a column or table**
+    
+- Q21: In which join type would you get rows with NULL values where there is no match in both tables?
+    
+    **Answer: C) Full Outer Join**
+    
+- Q22: What keyword is used to rename columns in SELECT?
+    
+    **Answer: C) AS**
+    
+- Q23: In a right outer join, which table's records are all included?
+    
+    **Answer: A) Right table**
+    
+- Q24: How would you add a new column named Email (VARCHAR(255)) to the Employees table?
+    
+    **Answer: A) ALTER TABLE Employees ADD Email VARCHAR(255);**
+    
+- Q25: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You need to delete all employees who belong to DepartmentID 1.
+    
+    **Answer: C) DELETE FROM Employees WHERE DepartmentID = 1;**
+    
+- Q26: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You need to update the Salary of the employee with EmployeeID 101 to $75,000.
+    
+    **Answer: C) UPDATE Employees SET Salary = 75000 WHERE EmployeeID = 101;**
+    
+- Q27: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You want to retrieve the FirstName and LastName of all employees who earn more than $60,000.
+    
+    **Answer: B) SELECT FirstName, LastName FROM Employees WHERE Salary > 60000;**
+    
+- Q28: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. How would you find the average Salary for each DepartmentID?
+    
+    **Answer: B) SELECT DepartmentID, AVG(Salary) FROM Employees GROUP BY DepartmentID;**
+    
+- Q29: What does the MAX function return?
+    
+    **Answer: B) Maximum value**
+    
+- Q30: What is the purpose of the NOT IN operator?
+    
+    **Answer: B) Excludes values in a list**
+    
+- Q31: What type of join would you use to match all records from the left table and only matching records from the right table?
+    
+    **Answer: C) Left Outer Join**
+    
+- Q32: What type of table is based on a SELECT query?
+    
+    **Answer: A) View**
+    
+- Q33: Which clause groups rows based on a specific column?
+    
+    **Answer: C) GROUP BY**
+    
+- Q34: Which function calculates the number of distinct values?
+    
+    **Answer: B) COUNT(DISTINCT)**
+    
+- Q35: In a LIKE pattern, what does symbol _ represent?
+    
+    **Answer: A) Any one character**
+    
+- Q36: What operator would you use to check if a value exists within a list of values?
+    
+    **Answer: B) IN**
+    
+- Q37: What is the default type of join in SQL if no type is specified?
+    
+    **Answer: A) Inner Join**
+    
+- Q38: In SQL, what type of join combines rows with matching values only?
+    
+    **Answer: C) INNER JOIN**
+    
+- Q39: Which SQL function calculates the average of a column?
+    
+    **Answer: A) AVG**
+    
+- Q40: What type of join includes rows even if there is no match between tables?
+    
+    **Answer: B) Outer Join**
+    
+- Q41: What is a virtual table in SQL?
+    
+    **Answer: A) View**
+    
+- Q42: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You need to list the unique DepartmentIDs present in the Employees table.
+    
+    **Answer: C) SELECT DISTINCT DepartmentID FROM Employees;**
+    
+- Q43: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You want to retrieve all employee details, ordered by LastName in ascending order and then by FirstName in ascending order.
+    
+    **Answer: A) SELECT * FROM Employees ORDER BY LastName ASC, FirstName ASC;**
+    
+- Q44: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. How would you find the total number of employees in DepartmentID 3?
+    
+    **Answer: C) SELECT COUNT(EmployeeID) FROM Employees WHERE DepartmentID = 3;**
+    
+- Q45: You have a table named Employees with columns EmployeeID, FirstName, LastName, DepartmentID, and Salary. You want to retrieve the FirstName and LastName of employees whose FirstName starts with 'J'.
+    
+    **Answer: A) SELECT FirstName, LastName FROM Employees WHERE FirstName LIKE 'J%';**
+    
+- Q46: Which SQL clause is used to combine rows from multiple tables?
+    
+    **Answer: B) JOIN**
+    
+
+## ERD, RDM Quiz - Additional Questions
+
+- Q47: In a relational database, what is the significance of the order of attributes in a relation (table)?
+    
+    **Answer: b) The order is insignificant**
+    
+- Q48: When converting an ERD to an RDM, what is the purpose of defining data types for attributes?
+    
+    **Answer: C) To specify the type of data that can be stored in each attribute**
+    
+- Q49: In an ERD, what does an entity represent?
+    
+    **Answer: A) A table in a relational database**
+    
+- Q50: What is an example of a unary relationship in ER modeling?
+    
+    **Answer: D) Person to Spouse**
+    
+- Q51: Which notation is typically used to represent a weak entity in an ER diagram?
+    
+    **Answer: B) Double rectangle**
+    
+- Q52: What is another term for a tuple in a relational database?
+    
+    **Answer: c) Record**
+    
+- Q53: Which of the following is TRUE regarding foreign key constraints?
+    
+    **Answer: c) A foreign key ensures referential integrity between two relations.**
+    
+- Q54: What is an attribute in ER modeling?
+    
+    **Answer: C) A property or characteristic of an entity**
+    
+- Q55: Which of the following statements is true regarding a primary key?
+    
+    **Answer: c) Every table must have a primary key**
+    
+- Q56: In an ER diagram, what does a double rectangle symbol represent?
+    
+    **Answer: C) A weak entity**
+    
+- Q57: What is the purpose of a recursive relationship in ER modeling?
+    
+    **Answer: C) To represent a relationship between an entity and itself**
+    
+- Q58: Which term is used to describe a row in a relational database table?
+    
+    **Answer: B) Tuple**
+    
+- Q59: What is an attribute in the context of the Relational Data Model?
+    
+    **Answer: B) A column in a table**
+    
+- Q60: Which normal form ensures that there are no partial dependencies in a relational database?
+    
+    **Answer: B) Second Normal Form (2NF)**
+    
+- Q61: In the example where courseId is the primary key of the Course relation and is also present in the Student relation, what is the Student relation called?
+    
+    **Answer: c) Referencing relation**
+    
+- Q62: Which of the following is true regarding the entity-relationship model?
+    
+    **Answer: C) It helps describe the logical structure of data and relationships in a database.**
+    
+- Q63: What is another name for a table in a relational database?
+    
+    **Answer: c) Relation**
+    
+- Q64: What is a tuple in the context of a relational database?
+    
+    **Answer: b) A unique row in a table**
+    
+- Q65: What is the primary purpose of defining primary keys in the RDM?
+    
+    **Answer: A) To ensure data integrity and uniqueness**
+    
+- Q66: Which of the following is an example of a one-to-many relationship in a relational database?
+    
+    **Answer: C) Customer to Orders**
+    
+- Q67: Which of the following best describes the role of a superkey in a relation?
+    
+    **Answer: b) It ensures that no two tuples in the relation are identical**
+    
+- Q68: Which of the following is not a fundamental component of an ER model?
+    
+    **Answer: D) Algorithms**
+    
+- Q69: In the context of converting an ERD to an RDM, what is a foreign key?
+    
+    **Answer: C) A key used to establish relationships between tables**
+    
+- Q70: What is a primary key in a relational database?
+    
+    **Answer: b) One of the candidate keys selected to uniquely identify a tuple in a relation**
+    
+- Q71: In the process of converting an ERD to an RDM, what does "normalization" refer to?
+    
+    **Answer: B) Splitting tables into multiple tables to eliminate data redundancy**
+    
+- Q72: In a relational database, what is the role of a foreign key?
+    
+    **Answer: B) It establishes a link between two tables.**
+    
+- Q73: What is a foreign key in a relational database?
+    
+    **Answer: a) An attribute that references primary key values in another relation**
+    
+- Q74: What is a superkey in the context of a relational database?
+    
+    **Answer: b) An attribute or set of attributes that can uniquely identify a tuple in a relation**
+    
+- Q75: In an ER model, what is a relationship's degree?
+    
+    **Answer: B) The number of entities participating in the relationship**
+    
+- Q76: How are tables in a relational database typically related to each other?
+    
+    **Answer: b) Through shared attributes**
+    
+- Q77: Choose the correct answer for: "an entity can exist independently of another entity"
+    
+    **Answer: D) Strong entity**
+    
+- Q78: What is the role of a foreign key in an ER model?
+    
+    **Answer: B) It enforces referential integrity between tables.**
+    
+
+## SQL Commands Quiz - Additional Questions
+
+- Q79: To create a table in SQL, which command is used?
+    
+    **Answer: C) CREATE TABLE**
+    
+- Q80: In SQL, which command updates the values of multiple rows at once?
+    
+    **Answer: C) UPDATE**
+    
+- Q81: The term "DDL" includes commands that:
+    
+    **Answer: B) Define the structure of the database**
+    
+- Q82: The DELETE statement in SQL is classified as:
+    
+    **Answer: B) DML**
+    
+- Q83: In SQL, what does the COUNT function do?
+    
+    **Answer: B) Counts the rows**
+    
+- Q84: In SQL, what does the ON DELETE CASCADE option do?
+    
+    **Answer: A) Automatically deletes a record in the child table when deleted in the parent**
+    
+- Q85: In the SELECT statement, which clause is optional?
+    
+    **Answer: C) WHERE**
+    
+- Q86: Which clause is used to sort the results in ascending or descending order?
+    
+    **Answer: A) ORDER BY**
+    
+- Q87: The CHECK constraint is used for:
+    
+    **Answer: A) Validating data in columns**
+    
+- Q88: Which of the following is not a DDL command?
+    
+    **Answer: C) UPDATE**
+    
+- Q89: What SQL clause specifies a condition for selecting records?
+    
+    **Answer: C) WHERE**
+    
+- Q90: The GROUP BY clause is usually used with which type of functions?
+    
+    **Answer: A) Aggregate functions**
+    
+- Q91: How can you add a new column to an existing table?
+    
+    **Answer: C) ALTER TABLE**
+    
+- Q92: What does SELECT * do in SQL?
+    
+    **Answer: A) Selects all columns in a table**
+    
+- Q93: What is DDL in SQL?
+    
+    **Answer: A) Data Definition Language**
+    
+- Q94: Which operator checks if a value is within a specific range?
+    
+    **Answer: A) BETWEEN**
+    
+- Q95: What command is used to retrieve data in SQL?
+    
+    **Answer: D) SELECT**
+    
+- Q96: What is the default sorting order for the ORDER BY clause?
+    
+    **Answer: B) Ascending**
+    
+- Q97: Which DML command is used to add data to a table?
+    
+    **Answer: A) INSERT**
+    
+- Q98: Which statement about the DEFAULT constraint is correct?
+    
+    **Answer: A) It assigns a default value when no other value is specified**
+    
+- Q99: Which SQL command is used to change the structure of an existing table?
+    
+    **Answer: B) ALTER**
+    
+- Q100: What is the purpose of the INSERT command?
+    
+    **Answer: D) Add new data**
+    
+- Q101: What does the UNIQUE constraint do?
+    
+    **Answer: A) Prevents duplicate values in a column**
+    
+- Q102: What does SQL stand for?
+    
+    **Answer: B) Structured Query Language**
+    
+- Q103: Which SQL constraint ensures that values in a primary key column are unique?
+    
+    **Answer: D) PRIMARY KEY**
+    
+- Q104: Which SQL keyword eliminates duplicate rows in the result?
+    
+    **Answer: B) DISTINCT**
+    
+- Q105: What does DML stand for in SQL?
+    
+    **Answer: A) Data Manipulation Language**
+    
+- Q106: What does the SELECT statement do in SQL?
+    
+    **Answer: B) Retrieve data from a table**
+    
+- Q107: What is the purpose of the FOREIGN KEY constraint?
+    
+    **Answer: B) Links two tables together**
+    
+- Q108: Which SQL command is used to modify existing records?
+    
+    **Answer: B) UPDATE**
+    
+- Q109: Which SQL constraint ensures that column values must not be empty?
+    
+    **Answer: C) NOT NULL**
+    
+- Q110: What SQL command is used to remove a database?
+    
+    **Answer: B) DROP DATABASE**
+    
+- Q111: Which command grants user access to a database?
+    
+    **Answer: B) GRANT**
+    
+- Q112: Which wildcard symbol matches any substring in a LIKE pattern?
+    
+    **Answer: B) %**
+    
+- Q113: Which SQL command removes a table entirely?
+    
+    **Answer: C) DROP**
+    
+- Q114: How do you specify constraints when creating a table?
+    
+    **Answer: D) CONSTRAINT**
+    
+- Q115: What type of SQL statement is SELECT?
+    
+    **Answer: B) DML**
+    
+- Q116: The command to remove all constraints from a table is:
+    
+    **Answer: B) ALTER TABLE DROP CONSTRAINT**
+    
+- Q117: What does the ROLLBACK command do?
+    
+    **Answer: B) Cancel pending changes**
+    
+- Q118: Which SQL statement is used to modify a column data type?
+    
+    **Answer: B) ALTER TABLE**
+    
+
+## EERM Quiz - Additional Questions
+
+- Q119: Which is independent of any DBMS?
+    
+    **Answer: Conceptual design**
+    
+- Q120: Which type of attribute uniquely identifies entity instances?
+    
+    **Answer: Identifier**
+    
+- Q121: What does 'total completeness' imply for every supertype occurrence?
+    
+    **Answer: It must be a member of at least one subtype.**
+    
+- Q122: The "supertype" in EER modeling represents:
+    
+    **Answer: A general entity type with common attributes.**
+    
+- Q123: Which attribute can be computed from another attribute?
+    
+    **Answer: Derived attribute**
+    
+- Q124: The set of possible values for an attribute is called:
+    
+    **Answer: Domain**
+    
+- Q125: What defines overlapping subtypes concerning supertype entity instances?
+    
+    **Answer: Each instance may appear in more than one subtype.**
+    
+- Q126: Which of the following describes an association among entities?
+    
+    **Answer: A relationship.**
+    
+- Q127: NULL in attributes can mean:
+    
+    **Answer: Attribute value is missing/unknown**
+    
+- Q128: What is a key characteristic of Conceptual database design regarding DBMS?
+    
+    **Answer: It is entirely independent of any particular DBMS at a high level of design.**
+    
+- Q129: What is considered the most important modeling construct incorporated into the EER model?
+    
+    **Answer: Supertype/subtype relationships discriminator.**
+    
+- Q130: The process of Conceptual database design involves constructing a data model from information collected during which phase?
+    
+    **Answer: The requirements analysis phase, identifying user needs.**
+    
+- Q131: What is the defining characteristic of disjoint subtypes regarding supertype entity instances?
+    
+    **Answer: Each instance must appear in only one of the subtypes.**
+    
+- Q132: What is the fundamental nature of an attribute?
+    
+    **Answer: It represents a property or characteristic of an entity type.**
+    
+- Q133: Consider a supertype 'Vehicle' and subtypes 'Car' and 'Truck'. If 'Owns' is a relationship defined for 'Vehicle', which entities would participate in 'Owns'?
+    
+    **Answer: Both 'Car' and 'Truck' entities (as 'Vehicle').**
+    
+- Q134: One-to-many relationship means:
+    
+    **Answer: Each A maps to many B, each B to one A**
+    
+- Q135: What is the primary purpose of the Enhanced Entity Relationship (EER) model?
+    
+    **Answer: To extend the original E-R model with new modeling constructs.**
+    
+- Q136: What does the completeness constraint specify regarding entity supertype occurrences?
+    
+    **Answer: Whether each supertype occurrence must also be a member of at least one subtype.**
+    
+- Q137: For an 'Employee' entity type, 'Skill' would be considered what?
+    
+    **Answer: An attribute defining a property of the employee.**
+    
+- Q138: Which is an example of a composite attribute?
+    
+    **Answer: Name (First, Middle, Last)**
+    
+- Q139: If a relationship is defined at the supertype level, what does it imply for all subtypes?
+    
+    **Answer: All subtypes will participate in that relationship.**
+    
+- Q140: The "subtype" in EER modeling represents:
+    
+    **Answer: A specialized entity type that inherits from a supertype.**
+    
+- Q141: If you have an entity 'Employee' as a supertype, what might be a subtype?
+    
+    **Answer: 'Salaried Employee'**
+    
+- Q142: Chen notation is mainly used for:
+    
+    **Answer: Conceptual modeling**
+    
+- Q143: Which of the following is NOT explicitly included in an Entity Relationship Model (ERM) as described?
+    
+    **Answer: User interface designs for data input.**
+    
+- Q144: Which elements are explicitly mentioned as being part of an ERM?
+    
+    **Answer: Entities, attributes, relationships, and constraints.**
+    
+- Q145: How is 'partial completeness' symbolized in an EER diagram?
+    
+    **Answer: By a circle over a single line.**
+    
+- Q146: How is an attribute typically named in an E-R diagram context?
+    
+    **Answer: With a noun name describing a characteristic.**
+    
+- Q147: When an attribute is associated with a relationship, what does it typically describe?
+    
+    **Answer: A characteristic inherent to the connection itself.**
+    
+- Q148: An entity must always have:
+    
+    **Answer: A noun name**
+    
+- Q149: What does a subtype inherit from its supertype?
+    
+    **Answer: Its attributes and relationships.**
+    
+- Q150: If some supertype occurrences are NOT members of any subtype, this situation is known as:
+    
+    **Answer: Partial completeness.**
+    
+- Q151: What does 'Color' represent in the context of an 'Automobile' entity type?
+    
+    **Answer: An attribute describing a characteristic of the automobile.**
+    
+- Q152: Can attributes be associated with relationships?
+    
+    **Answer: Yes, attributes may also be associated with relationships.**
+    
+- Q153: How are disjoint subtypes indicated in an EERD?
+    
+    **Answer: With the letter 'd' inside the category shape.**
+    
+- Q154: ERM is mainly used for:
+    
+    **Answer: Database conceptual design**
+    
+
+## Closure, Normalization Quiz - Questions and Answers
+
+- Q155: What does the expression R ∪ S represent in relational algebra?
+    
+    **Answer: B) All tuples in R or S (or both), with duplicates removed.**
+    
+- Q156: Which of these dependencies violates 2NF but not 1NF?
+    
+    **Answer: B. Partial dependency**
+    
+- Q157: In relational algebra, what does the RIGHT OUTER JOIN operation return?
+    
+    **Answer: C) All tuples from the right relation and matching tuples from the left relation**
+    
+- Q158: What is the primary use of Armstrong's Axioms in database normalization?
+    
+    **Answer: C) To formally prove and derive functional dependencies**
+    
+- Q159: Which of the following anomalies does normalization help to eliminate?
+    
+    **Answer: D. All of the above**
+    
+- Q160: In relational algebra, what does the UNION operation do?
+    
+    **Answer: C) Retrieves all distinct tuples from both input relations**
+    
+- Q161: What does BCNF stand for?
+    
+    **Answer: B. Boyce-Codd Normal Form**
+    
+- Q162: To combine two relations R and S based on a common attribute where R.A = S.B, which operation is most appropriate?
+    
+    **Answer: C) R ⋈_{R.A = S.B} S**
+    
+- Q163: Which statement is true about BCNF?
+    
+    **Answer: B. BCNF is a stronger version of 3NF**
+    
+- Q164: Which of the following is required for a table to be in First Normal Form (1NF)?
+    
+    **Answer: A. No repeating groups or multivalued attributes**
+    
+- Q165: What type of dependency is eliminated by converting a relation to Second Normal Form (2NF)?
+    
+    **Answer: B. Partial dependency**
+    
+- Q166: In BCNF, every determinant must be a:
+    
+    **Answer: B. Candidate key**
+    
+- Q167: A transitive dependency in a database exists when:
+    
+    **Answer: B. A non-key attribute depends on another non-key attribute**
+    
+- Q168: Which operation in relational algebra combines two relations to produce a new relation containing all possible combinations of tuples from the original relations?
+    
+    **Answer: A) CARTESIAN PRODUCT**
+    
+- Q169: Which normal form is commonly sufficient for business database designs?
+    
+    **Answer: C. 3NF**
+    
+- Q170: In 3NF, a table must be in 2NF and free from which dependency?
+    
+    **Answer: A. Transitive dependency**
+    
+- Q171: Which operation in relational algebra returns all distinct tuples that appear in both of the input relations?
+    
+    **Answer: B) INTERSECT**
+    
+- Q172: In relational algebra, what does the LEFT OUTER JOIN operation return?
+    
+    **Answer: C) All tuples from the left relation and matching tuples from the right relation**
+    
+- Q173: Which of the following is a unary operation in relational algebra?
+    
+    **Answer: C) PROJECT**
+    
+- Q174: What is the primary goal of database normalization?
+    
+    **Answer: B) To reduce data redundancy and improve data integrity.**
+    
+- Q175: Which operation is used to select specific attributes from a relation, discarding the others?
+    
+    **Answer: A) PROJECT**
+    
+- Q176: Which anomaly can occur when a single relation contains more than one entity type?
+    
+    **Answer: D. All of the above**
+    
+- Q177: What is the purpose of normalization in databases?
+    
+    **Answer: B. To reduce data redundancy**
+    
+- Q178: What is the result of the JOIN operation in relational algebra when there is no matching data between the two input relations?
+    
+    **Answer: A) An empty relation**
+    
+- Q179: Which Normal Form deals with the removal of repeating groups and ensuring that all attributes are atomic?
+    
+    **Answer: C) First Normal Form (1NF)**
+    
+- Q180: Which relational algebra operation is used to select rows (tuples) that satisfy a given condition?
+    
+    **Answer: B) Selection (σ)**
+    
+- Q181: A functional dependency where a non-key attribute depends on only part of a primary key is known as a:
+    
+    **Answer: B. Partial dependency**
+    
+- Q182: What is the result of a RIGHT OUTER JOIN when there are no matching rows in the left table?
+    
+    **Answer: D) An empty result for the left table**
+    
+- Q183: Consider the following table Orders with attributes: (OrderID, CustomerID, CustomerName, ItemID, ItemName, ItemPrice, OrderDate). Functional Dependencies: OrderID → CustomerID, CustomerName, OrderDate; ItemID → ItemName, ItemPrice; OrderID, ItemID → (all other attributes); CustomerID → CustomerName. Does the Orders table have any partial dependencies with respect to its primary key (OrderID, ItemID)?
+    
+    **Answer: D) Yes, ItemID → ItemName, ItemPrice.**
+    
+- Q184: In normalization, removing transitive dependencies helps achieve which normal form?
+    
+    **Answer: C. 3NF**
+    
+- Q185: Which of the following must be done to convert a relation to 2NF?
+    
+    **Answer: C. Remove partial dependencies**
+    
+- Q186: What is the Closure of a set of attributes?
+    
+    **Answer: C) The set of attributes that are dependent on the given set**
+    
+- Q187: What does the PROJECT operation in relational algebra do?
+    
+    **Answer: B) Retrieves specific columns from a relation**
+    
+- Q188: A table with a single attribute as the primary key in 1NF is automatically in:
+    
+    **Answer: A. 2NF**
+    
+- Q189: A table is in BCNF if:
+    
+    **Answer: A. It is in 3NF and every functional dependency has a determinant that is a candidate key**
+    
+- Q190: Which relational algebra operation is used to select columns (attributes) from a relation?
+    
+    **Answer: B) Projection (π)**
+    
+- Q191: A transitive dependency exists when a non-key attribute is dependent on another non-key attribute, which in turn is dependent on the primary key. This type of dependency violates which Normal Form?
+    
+    **Answer: C) 3NF**
+    
+- Q192: In a FULL OUTER JOIN, which table's data is included in the result, even if there are no matching rows in the other table?
+    
+    **Answer: A) Both left and right tables**
+    
+- Q193: In a RIGHT OUTER JOIN, which table's data is included in the result, even if there are no matching rows in the other table?
+    
+    **Answer: C) Only the right table**
+    
+- Q194: A table is in Second Normal Form (2NF) if it is in 1NF and:
+    
+    **Answer: D) There are no partial dependencies.**
+    
+- Q195: What is the purpose of the CARTESIAN PRODUCT operation in relational algebra?
+    
+    **Answer: C) To return all possible combinations of tuples from two relations**
+    
+- Q196: Which operation removes duplicate tuples by default?
+    
+    **Answer: C) Union (∪)**
+    
+- Q197: What does the SET DIFFERENCE (-) operation in relational algebra do?
+    
+    **Answer: C) Returns all tuples from the first relation that do not appear in the second relation**
+    
+- Q198: If a table is in 3NF, it must:
+    
+    **Answer: A. Have no transitive or partial dependencies**
+    
+- Q199: A table in BCNF must also be in:
+    
+    **Answer: B. 1NF, 2NF, and 3NF**
+    
+- Q200: In a LEFT OUTER JOIN, which table's data is included in the result, even if there are no matching rows in the other table?
+    
+    **Answer: B) Only the left table**
+    
+- Q201: Which condition must a table meet to be in 2NF?
+    
+    **Answer: B. It must be in 1NF and have no partial dependencies**
+    
+- Q202: How is the closure of attribute X typically denoted?
+    
+    **Answer: C) X+**
+    
+
+## Relational Algebra Quiz - Questions and Answers
+
+- Q203: The Full Outer Join ensures that all tuples of both A and B are ______ in the result.
+    
+    **Answer: C. present**
+    
+- Q204: Which of the following is NOT a characteristic of a relation in the relational model?
+    
+    **Answer: A) Tuples are ordered.**
+    
+- Q205: If relation P has n₁ tuples and relation Q has n₂ tuples, then P × Q will have ______ tuples.
+    
+    **Answer: B. n₁ × n₂**
+    
+- Q206: Find all tuples in R that are also in S.
+    
+    **Answer: D) R ∩ S**
+    
+- Q207: Which of the following operations removes unmatched tuples completely?
+    
+    **Answer: C. Inner join**
+    
+- Q208: Show all teams (even with no players) and all players (even if not on a team).
+    
+    **Answer: D) Teams ⟗_{Teams.TeamID = Players.TeamID} Players**
+    
+- Q209: In the relational data model, what is a row commonly referred to as?
+    
+    **Answer: C) Tuple**
+    
+- Q210: Find all tuples from TableX that are not present in TableY, and then project their ID attribute.
+    
+    **Answer: C) π_{ID}(TableX - TableY)**
+    
+- Q211: Which join operation returns all tuples from the left relation, and matching tuples from the right relation? If no match, right-side attributes are NULL.
+    
+    **Answer: D) Left Outer Join (⟕)**
+    
+- Q212: A Join that includes all tuples of both relations, matching or not, is called a ______.
+    
+    **Answer: C. Full outer join**
+    
+- Q213: Get all Movies and any Actors who starred in them. Movies with no listed actors should still appear.
+    
+    **Answer: D) Movies ⟕{Movies.MovieID = Actors.MovieID} Actors**
+    
+- Q214: The relational algebra consists of a set of operations that take one or two ______ as input and produce a new one as output.
+    
+    **Answer: B. relations**
+    
+- Q215: Combine the Courses and Professors tables based on a common ProfID attribute.
+    
+    **Answer: C) Courses ⋈{Courses.ProfID = Professors.ProfID} Professors**
+    
+- Q216: Select all orders that have a Quantity greater than 5.
+    
+    **Answer: C) σ_{Quantity > 5}(Orders)**
+    
+- Q217: Find all CustomerIDs that have placed an order. Assume tables Customers and Orders exist, with CustomerID as a common attribute.
+    
+    **Answer: C) π_{CustomerID}(Customers ⋈ Orders)**
+    
+- Q218: If [instructor.ID](http://instructor.ID) appears in both relations, we can distinguish them using ______.
+    
+    **Answer: B. relation name prefix**
+    
+- Q219: In the Project operation, which of the following is true?
+    
+    **Answer: B. It removes specific columns.**
+    
+- Q220: Which type of join returns all tuples from the left relation and fills unmatched ones with NULLs?
+    
+    **Answer: B. Left outer join**
+    
+- Q221: In an Inner Join, only the ______ rows are returned.
+    
+    **Answer: A. matching**
+    
+- Q222: The Select operation can combine multiple predicates using logical connectives such as ______.
+    
+    **Answer: B. and, or, not**
+    
+- Q223: Show all Students and their Enrollments, even if a student has no enrollments.
+    
+    **Answer: B) Students ⟕{Students.StudentID = Enrollments.StudentID} Enrollments**
+    
+- Q224: A foreign key is an attribute (or set of attributes) in one relation that refers to a _______ in another relation (or the same relation).
+    
+    **Answer: C) Primary Key**
+    
+- Q225: Find all attributes of Customers who live in 'New York'.
+    
+    **Answer: B) σ{City = 'New York'}(Customers)**
+    
+- Q226: A primary key in the ER model is represented as an attribute that is:
+    
+    **Answer: A) Underlined**
+    
+- Q227: A minimal set of attributes that uniquely identifies a tuple in a relation is called a:
+    
+    **Answer: B) Candidate Key**
+    
+- Q228: Create a list containing all Teams (with TeamID, TeamName) and all Players (with PlayerID, TeamAffiliationID). This list must show every team (even if it has no players), every player (even if they're not currently on a team), and teams with their respective players.
+    
+    **Answer: C) Teams ⟗{Teams.TeamID = Players.TeamAffiliationID} Players**
+    
+- Q229: Get all suppliers even if they don't supply any products. Assume Products and Suppliers tables have a common SupplierID.
+    
+    **Answer: C) Products ⟖_{Products.SupplierID = Suppliers.SupplierID} Suppliers**
+    
+- Q230: Select all products from the Products table where Price is less than or equal to 10.00.
+    
+    **Answer: C) σ_{Price ≤ 10.00}(Products)**
+    
+- Q231: Select all attributes from the Students table where GPA is greater than 3.5.
+    
+    **Answer: C) σ_{GPA > 3.5}(Students)**
+    
+- Q232: The expression ∏name(σdept_name="Physics"(instructor)) retrieves ______.
+    
+    **Answer: B. Names of all instructors in Physics**
+    
+- Q233: In the expression σdept_name = "Physics" (instructor), "Physics" is a ______.
+    
+    **Answer: C. Value**
+    
+- Q234: Get the BookTitle and Author for all books published after 2010.
+    
+    **Answer: A) π{BookTitle, Author}(σ{PubYear > 2010}(Books))**
+    
+- Q235: The main goal of relational algebra is to provide a ______ way of expressing queries.
+    
+    **Answer: B. mathematical**
+    
+- Q236: Project only the Name and Age attributes from the Employees table.
+    
+    **Answer: B) π{Name, Age}(Employees)**
+    
+- Q237: Display all Projects and any Tasks associated with them. Projects without tasks should still appear.
+    
+    **Answer: C) Projects ⟕_{Projects.ProjectID = Tasks.ProjectID} Tasks**
+    
+- Q238: Get the names of departments that have employees. Assume Departments and Employees tables have a common DeptID.
+    
+    **Answer: B) π_{DeptName}(Departments ⋈ Employees)**
+    
+- Q239: Get all customers even if they have no orders. Assume Customers and Orders tables have a common CustID.
+    
+    **Answer: B) Customers ⟕_{Customers.CustID = Orders.CustID} Orders**
+    
+- Q240: The Right Outer Join returns all tuples from the ______ relation.
+    
+    **Answer: B. right**
+    
+- Q241: In an ER diagram, what symbol is typically used to represent an entity set?
+    
+    **Answer: B) Rectangle**
+    
+- Q242: A set of allowed values for one or more attributes is called a:
+    
+    **Answer: C) Domain**
+    
+- Q243: Find all OrderIDs from the Orders table.
+    
+    **Answer: C) π_{OrderID}(Orders)**
+    
+- Q244: If relation R has attributes (A, B) and relation S has attributes (C, D), what are the attributes of R × S?
+    
+    **Answer: A) (A, B, C, D)**
+    
+- Q245: List all Recipes and their Ingredients, including ingredients that are not used in any recipe.
+    
+    **Answer: B) Recipes ⟖_{Recipes.RecipeID = Ingredients.RecipeID} Ingredients**
+    
+- Q246: In relational algebra, duplicate rows are ______ in the result.
+    
+    **Answer: B. removed**
+    
+- Q247: The Join operation can be seen as a combination of ______ and select.
+    
+    **Answer: B. Cartesian product**
+    
+- Q248: Find all tuples in Customers that are not in LoyalCustomers.
+    
+    **Answer: C) Customers - LoyalCustomers**
+    
+- Q249: What does a double rectangle typically represent in an ER diagram?
+    
+    **Answer: B) A weak entity set**
+    
+- Q250: The Rename operation assigns a new name to a relation or its ______.
+    
+    **Answer: B. attributes**
+    
+- Q251: Select employees whose Salary is between 50000 and 70000 (inclusive).
+    
+    **Answer: B) σ{Salary ≥ 50000 AND Salary ≤ 70000}(Employees)**
+    
+- Q252: Which of the following is a unary operation?
+    
+    **Answer: C. Project**
