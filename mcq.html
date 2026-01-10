@@ -64,6 +64,7 @@
             color: var(--text-primary);
             margin: 0;
             min-height: 100vh;
+            padding-bottom: 100px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -115,7 +116,7 @@
         .nav-tab.active {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             animation: glow 2s ease-in-out infinite alternate;
             box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
         }
@@ -129,6 +130,7 @@
             from {
                 box-shadow: 0 0 15px rgba(102, 126, 234, 0.3);
             }
+
             to {
                 box-shadow: 0 0 25px rgba(102, 126, 234, 0.6), 0 0 40px rgba(118, 75, 162, 0.3);
             }
@@ -486,6 +488,16 @@
             transform: translateY(-2px);
         }
 
+        .btn-warning {
+            background: #f59e0b;
+            color: #0f172a;
+        }
+
+        .btn-warning:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+        }
+
         .shortcuts-hint {
             text-align: center;
             margin-top: 1rem;
@@ -679,13 +691,14 @@
 
             <div class="controls">
                 <button class="btn-secondary" onclick="prevQuestion()">← Trước</button>
-                <button class="btn-primary" onclick="checkAnswer()" id="checkBtn">Kiểm tra</button>
                 <button class="btn-secondary" onclick="nextQuestion()">Tiếp →</button>
                 <button class="btn-success" onclick="resetQuiz()">🔄 Làm lại</button>
+                <button class="btn-warning" onclick="clearHistory()" title="Xóa lịch sử làm bài">🗑️ Xóa lịch
+                    sử</button>
             </div>
             <div class="shortcuts-hint">
-                Phím tắt: <strong>1-4</strong> (Chọn đáp án) • <strong>Enter</strong> (Kiểm tra) • <strong>← /
-                    →</strong> (Chuyển câu)
+                Phím tắt: <strong>1-4</strong> hoặc <strong>A-D</strong> (Chọn đáp án) • <strong>← / →</strong> (Chuyển
+                câu)
             </div>
         </section>
 
@@ -705,7 +718,8 @@
                 <span class="about-badge">🤖 100% AI Generated</span>
                 <a href="https://github.com/havanphong784/Q-A_Database" target="_blank" class="github-link">
                     <svg class="github-icon" viewBox="0 0 24 24" width="18" height="18">
-                        <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        <path fill="currentColor"
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                     </svg>
                     GitHub
                 </a>
@@ -764,6 +778,7 @@
                 box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
                 transform: scale(1);
             }
+
             to {
                 box-shadow: 0 0 25px rgba(102, 126, 234, 0.7), 0 0 40px rgba(118, 75, 162, 0.4);
                 transform: scale(1.02);
@@ -784,8 +799,15 @@
         }
 
         @keyframes pulse-warning {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.85; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.85;
+            }
         }
 
         .github-link {
@@ -818,7 +840,7 @@
             .about-content {
                 gap: 8px;
             }
-            
+
             .about-section {
                 padding: 12px 15px;
             }
@@ -849,6 +871,10 @@
         let correctCount = 0;
         let incorrectCount = 0;
         let answeredQuestions = new Set();
+        let questionResults = {}; // Store which answer was selected for each question
+
+        // LocalStorage key
+        const STORAGE_KEY = 'mcq_quiz_history';
 
         // Elements
         const elQIndex = document.getElementById('qIndex');
@@ -860,7 +886,6 @@
         const elResultIcon = document.getElementById('resultIcon');
         const elResultText = document.getElementById('resultText');
         const elSourceInfo = document.getElementById('sourceInfo');
-        const elCheckBtn = document.getElementById('checkBtn');
         const elProgressBar = document.getElementById('progressBar');
         const elCateList = document.getElementById('cateList');
         const elScoreCorrect = document.getElementById('scoreCorrect');
@@ -869,9 +894,58 @@
         const elVocabList = document.getElementById('vocabList');
 
         function init() {
+            loadHistory(); // Load saved progress
             renderCategories();
-            loadQuestion(0);
+            loadQuestion(currentQIndex);
             updateScoreDisplay();
+        }
+
+        // --- LocalStorage Functions ---
+        function saveHistory() {
+            const data = {
+                correctCount,
+                incorrectCount,
+                answeredQuestions: Array.from(answeredQuestions),
+                questionResults,
+                currentQIndex,
+                lastUpdated: new Date().toISOString()
+            };
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+        }
+
+        function loadHistory() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    const data = JSON.parse(saved);
+                    correctCount = data.correctCount || 0;
+                    incorrectCount = data.incorrectCount || 0;
+                    answeredQuestions = new Set(data.answeredQuestions || []);
+                    questionResults = data.questionResults || {};
+                    currentQIndex = data.currentQIndex || 0;
+                    console.log('📚 Đã tải lịch sử làm bài:', {
+                        đúng: correctCount,
+                        sai: incorrectCount,
+                        đãLàm: answeredQuestions.size
+                    });
+                }
+            } catch (e) {
+                console.error('Lỗi tải lịch sử:', e);
+            }
+        }
+
+        function clearHistory() {
+            if (confirm('Bạn có chắc muốn xóa toàn bộ lịch sử làm bài?')) {
+                localStorage.removeItem(STORAGE_KEY);
+                correctCount = 0;
+                incorrectCount = 0;
+                answeredQuestions.clear();
+                questionResults = {};
+                currentQIndex = 0;
+                updateScoreDisplay();
+                loadQuestion(0);
+                alert('✅ Đã xóa lịch sử làm bài!');
+            }
         }
 
         // --- Categories Logic ---
@@ -884,17 +958,29 @@
 
             const categories = Object.keys(counts);
 
-            let html = `<li class="cate-item active" onclick="filterCategory('All')" id="cat-All">
+            let html = `<li class="cate-item active" data-cat="All" id="cat-All">
                 Tất cả <span class="cate-count">${mcqData.length}</span>
             </li>`;
 
-            categories.forEach(cat => {
-                html += `<li class="cate-item" onclick="filterCategory('${escapeHtml(cat)}')" id="cat-${escapeHtmlId(cat)}">
+            categories.forEach((cat, index) => {
+                html += `<li class="cate-item" data-cat="${index}" id="cat-${escapeHtmlId(cat)}">
                     ${cat} <span class="cate-count">${counts[cat]}</span>
                 </li>`;
             });
 
             elCateList.innerHTML = html;
+
+            // Add click event listeners
+            document.querySelectorAll('.cate-item').forEach(el => {
+                el.addEventListener('click', function () {
+                    const catIndex = this.dataset.cat;
+                    if (catIndex === 'All') {
+                        filterCategory('All');
+                    } else {
+                        filterCategory(categories[parseInt(catIndex)]);
+                    }
+                });
+            });
         }
 
         function filterCategory(cat) {
@@ -951,15 +1037,36 @@
             elQCategory.textContent = data.category || "General";
             elQuestionText.textContent = data.question;
 
-            // Reset state
-            selectedOption = null;
-            answered = false;
-            elResultMessage.className = 'result-message';
-            elCheckBtn.textContent = 'Kiểm tra';
-            elCheckBtn.className = 'btn-primary';
+            // Check if already answered
+            const questionId = data.id;
+            const previousResult = questionResults[questionId];
 
-            // Render options
-            renderOptions(data.options);
+            if (previousResult) {
+                // Restore answered state
+                selectedOption = previousResult.selected;
+                answered = true;
+                renderOptions(data.options, previousResult);
+                
+                // Show result message
+                if (previousResult.isCorrect) {
+                    elResultMessage.className = 'result-message correct';
+                    elResultIcon.textContent = '🎉';
+                    elResultText.textContent = 'Chính xác!';
+                } else {
+                    elResultMessage.className = 'result-message incorrect';
+                    elResultIcon.textContent = '❌';
+                    elResultText.textContent = `Sai rồi! Đáp án đúng là: ${previousResult.correct}`;
+                }
+                elSourceInfo.textContent = data.source ? `(Nguồn: ${data.source})` : '';
+            } else {
+                // Reset state for new question
+                selectedOption = null;
+                answered = false;
+                elResultMessage.className = 'result-message';
+                elSourceInfo.textContent = '';
+                renderOptions(data.options, null);
+            }
+
             updateProgress();
 
             // Update vocabulary panel
@@ -967,7 +1074,7 @@
             updateVocabPanel(data.question + ' ' + optionsText);
         }
 
-        function renderOptions(options) {
+        function renderOptions(options, previousResult = null) {
             elOptionsContainer.innerHTML = '';
 
             const letters = ['A', 'B', 'C', 'D'];
@@ -976,11 +1083,36 @@
                     const optionEl = document.createElement('div');
                     optionEl.className = 'option';
                     optionEl.dataset.letter = letter;
-                    optionEl.onclick = () => selectOption(letter);
+                    
+                    // Only allow clicking if not already answered
+                    if (!previousResult) {
+                        optionEl.onclick = () => selectOption(letter);
+                    } else {
+                        optionEl.classList.add('disabled');
+                        
+                        // Mark correct answer
+                        if (letter === previousResult.correct) {
+                            optionEl.classList.add('correct');
+                        }
+                        // Mark wrong selected answer
+                        if (letter === previousResult.selected && !previousResult.isCorrect) {
+                            optionEl.classList.add('incorrect');
+                        }
+                    }
+
+                    let iconHtml = '';
+                    if (previousResult) {
+                        if (letter === previousResult.correct) {
+                            iconHtml = '<span class="option-icon">✓</span>';
+                        } else if (letter === previousResult.selected && !previousResult.isCorrect) {
+                            iconHtml = '<span class="option-icon">✗</span>';
+                        }
+                    }
 
                     optionEl.innerHTML = `
                         <span class="option-letter">${letter}</span>
                         <span class="option-text">${options[letter]}</span>
+                        ${iconHtml}
                     `;
 
                     elOptionsContainer.appendChild(optionEl);
@@ -993,13 +1125,18 @@
 
             selectedOption = letter;
 
-            // Update UI
+            // Update UI - highlight selected
             document.querySelectorAll('.option').forEach(opt => {
                 opt.classList.remove('selected');
                 if (opt.dataset.letter === letter) {
                     opt.classList.add('selected');
                 }
             });
+
+            // Auto check answer after short delay for visual feedback
+            setTimeout(() => {
+                checkAnswer();
+            }, 150);
         }
 
         function checkAnswer() {
@@ -1050,17 +1187,19 @@
             const questionId = data.id;
             if (!answeredQuestions.has(questionId)) {
                 answeredQuestions.add(questionId);
+                questionResults[questionId] = {
+                    selected: selectedOption,
+                    correct: correctAnswer,
+                    isCorrect: isCorrect
+                };
                 if (isCorrect) {
                     correctCount++;
                 } else {
                     incorrectCount++;
                 }
                 updateScoreDisplay();
+                saveHistory(); // Save progress
             }
-
-            // Update button
-            elCheckBtn.textContent = 'Tiếp →';
-            elCheckBtn.onclick = nextQuestion;
         }
 
         function updateScoreDisplay() {
@@ -1072,23 +1211,27 @@
         function nextQuestion() {
             if (currentQIndex < filteredQuestions.length - 1) {
                 loadQuestion(currentQIndex + 1);
+                saveHistory(); // Save position
             }
-            elCheckBtn.onclick = checkAnswer;
         }
 
         function prevQuestion() {
             if (currentQIndex > 0) {
                 loadQuestion(currentQIndex - 1);
+                saveHistory(); // Save position
             }
         }
 
         function resetQuiz() {
+            // Only reset current session scores, keep history
             correctCount = 0;
             incorrectCount = 0;
             answeredQuestions.clear();
+            questionResults = {};
             currentQIndex = 0;
             updateScoreDisplay();
             loadQuestion(0);
+            saveHistory();
         }
 
         function updateProgress() {
